@@ -1,0 +1,35 @@
+﻿@*@using Google.Apis.Auth.OAuth2;
+@using Google.Apis.Drive.v3;
+@using Google.Apis.Drive.v3.Data;
+@using Google.Apis.Services;
+@using Google.Apis.Util.Store;
+@model IList<Google.Apis.Drive.v3.Data.File>
+    @{
+        ViewBag.Title = "Disk";
+     }
+<h4>Файлы:</h4>
+@for (int i = 0; i < Model.Count; i++)
+{
+    <hr>
+    @: <span style="font-size:150%">Name:</span> <span>@Model[i].Name</span><br />
+    @: <span style="font-size:150%">ID:</span> <span>@Model[i].Id</span><br />
+    //@: <span style="font-size:150%">Type:</span> <span>@Model[i].</span>
+    <hr>
+}*@
+
+
+
+<div class="row">
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Action <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+    </div>  
+</div>
